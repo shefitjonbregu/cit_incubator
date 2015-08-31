@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile | CIT Incubator</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="login.js"></script>
+
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      	<!-- Brand and toggle get grouped for better mobile display -->
+      	<div class="navbar-header">
+        	<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+          		<span class="sr-only">Toggle navigation</span>
+          		<span class="icon-bar"></span>
+          		<span class="icon-bar"></span>
+          		<span class="icon-bar"></span>
+         	</button>
+         	<a href="#" class="navbar-brand"><span id="cit"><b>CIT</b></span> <span id="incubator">INCUBATOR</span></a>
+      	</div>
+ 
+      	<div id="navbarCollapse" class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav navbar-right">
+          		<!--li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li-->
+          		<li class="dropdown" style="margin-right:10px;">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-user"></span> Erkid Hoxholli <i class="caret"></i></a>
+	                <ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Logout</a></li>
+	                  
+	                  
+	                </ul>
+              	</li>
+        	</ul>
+      	</div>      
+</nav><!-- end navigation menu -->	
+
+<div class="container">
+<div class="row">
+	<div class="col-md-4">
+		<div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object dp img-circle" src="https://avatars1.githubusercontent.com/u/7354959?v=3&s=460" style="width: 150px;height:150px;">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-family: monospace;font-size: 16px;">Erkid Hoxholli</h4>
+                <h5></h5>
+                <hr style="margin:8px auto">
+
+                <span class="label label-default">Born</span>
+                <span class="label label-info">14/11/1994</span>
+                </br>
+                <span class="label label-default">Gender</span>
+                <span class="label label-info">male</span>
+                <br>
+                <span class="label label-default">POB</span>
+                <span class="label label-info">Gramsh</span>
+                </br>
+                <span class="label label-default">University</span>
+                <span class="label label-info">CIT</span>
+                </br>
+                <span class="label label-default">Email</span>
+                <span class="label label-info">e.hoxholli@cit.edu.al</span> 
+             
+            </div><!-- end media-body-->
+        </div><!-- end media -->
+	</div><!-- end col-md-4 -->
+	<div class="col-md-8" style="margin-top:30px;">
+		  <div class="panel panel-primary">
+		    <div class="panel-heading">
+		    	<span style="font-family: monospace;font-size: 18px;">Your Project List</span>
+		    	<a href="add_project.html" style="float:right;padding"type="button" class="btn btn-default" aria-label="Left Align"> Add
+				    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				</a>
+		    </div>
+		    <div class="panel-body">
+		    			<div class="table-responsive">
+  			<table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>Title</th>
+			        <th>Submited</th>
+			        <th>Operation</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>Speech Recognition Using Machine Learning</td>
+			        <td>14 January, 2015</td>
+			        <td>
+			        	<button type="button" class="btn btn-danger" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+						</button>
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+						</button>
+									       
+			        </td>
+
+			      </tr>
+			      <tr>
+			        <td>Augmented Reality Car Game</td>
+			        <td>22 August, 2015</td>
+			        <td>
+			        	<button type="button" class="btn btn-danger" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+						</button>
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+						</button>
+									       
+			        </td>
+			      </tr>
+			      <tr>
+			        <td>Face Recognition Using Neural Networks</td>
+			        <td>25 August, 2015</td>
+			        <td>
+			        	<button type="button" class="btn btn-danger" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+						</button>
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+						  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+						</button>
+									       
+			        </td>
+
+			      </tr>
+			    </tbody>
+			</table>
+		</div>
+	    </div>
+	  	</div>
+	</div>
+</div>
+
+	
+</div>
+ <footer class="footer">
+      <div class="container">
+        <p class="text-muted" style="font-size:12px;">&copy 2015 <a style="color: #222;text-decoration: none;font-size:12px; " href="http://www.cit.edu.al">Canadian Institute of Technology</a> <a style="color: #222;text-decoration: none;float:right;font-size:12px;">Terms of Use</a></p>
+		
+      </div>
+    </footer>
+
+</body>
+</html>

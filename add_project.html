@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile | CIT Incubator</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="login.js"></script>
+
+
+	<script>
+	$(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+    
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+        var $target = $(e.target);
+    
+        if ($target.parent().hasClass('disabled')) {
+            return false;
+        }
+    });
+
+    $(".next-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.next().removeClass('disabled');
+        nextTab($active);
+
+    });
+    $(".prev-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        prevTab($active);
+
+    });
+});
+
+function nextTab(elem) {
+    $(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+}
+
+	</script>
+	
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      	<!-- Brand and toggle get grouped for better mobile display -->
+      	<div class="navbar-header">
+        	<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+          		<span class="sr-only">Toggle navigation</span>
+          		<span class="icon-bar"></span>
+          		<span class="icon-bar"></span>
+          		<span class="icon-bar"></span>
+         	</button>
+         	<a href="#" class="navbar-brand"><span id="cit"><b>CIT</b></span> <span id="incubator">INCUBATOR</span></a>
+      	</div>
+ 
+      	<div id="navbarCollapse" class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav navbar-right">
+          		<!--li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li-->
+          		<li class="dropdown" style="margin-right:10px;">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-user"></span> Erkid Hoxholli <i class="caret"></i></a>
+	                <ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Logout</a></li>
+	                  
+	                  
+	                </ul>
+              	</li>
+        	</ul>
+      	</div>      
+</nav><!-- end navigation menu -->	
+
+<div class="container">
+	<div class="row">
+		<section>
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-thumbs-up"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-hand-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-hand-right"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-check"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form role="form">
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+						<div class="row">
+							<div class="col-md-6">
+							<div class="panel panel-primary">
+									<div class="panel-heading">Project Description</div>
+									<div class="panel-body">
+										<p class="sub-header" for="exampleInputName2">Project Name</p>
+										<input type="text" class="form-control" id="exampleInputEmail1">
+										
+										<p class="sub-header" style="padding-top:20px;" for="exampleInputName2">Background</p>
+										<p for="exampleInputName2">Why is the project being undertaken ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+										<p class="sub-header" style="padding-top:20px;" for="exampleInputName2">Objectives</p>
+										<p for="exampleInputName2">What do you aim ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+									</div>
+								  </div>
+								
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-primary">
+									<div class="panel-heading">Scope</div>
+									<div class="panel-body">
+										<p class="sub-header" for="exampleInputName2">Overview</p>
+										<p for="exampleInputName2">What will you sell</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">Who will buy it ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+										<p for="exampleInputName2">How will your business idea help people ?</p>
+										<textarea class="form-control" rows="6"></textarea>
+									
+									
+									</div>
+								  </div>
+								
+							</div>
+
+						</div>
+					
+						
+
+						
+						
+						
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="panel panel-primary">
+									<div class="panel-heading">Scope</div>
+									<div class="panel-body">
+										<p class="sub-header" for="exampleInputName2">Existing competitors in the market</p>
+										<p for="exampleInputName2">Is your idea implemented before ?</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">What is new in your proposal ?</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p class="sub-header" style="padding-top:20px;" for="exampleInputName2">Hustling</p>
+										<p for="exampleInputName2">How will customers learn about your business ?</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">How can you encourage referrals ?</p>
+										<textarea class="form-control" rows="4"></textarea>
+	
+									
+									</div>
+								  </div>
+								
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-primary">
+									<div class="panel-heading">Scope</div>
+									<div class="panel-body">
+										<p class="sub-header" for="exampleInputName2">Ka-Ching</p>
+										<p for="exampleInputName2">What will you change ?</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">How will you get paid ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+										<p for="exampleInputName2">How else will you make money from this project ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+										<p for="exampleInputName2">What is the impact of your innovation ?</p>
+										<textarea class="form-control" rows="5"></textarea>
+									
+									</div>
+								  </div>
+								
+							</div>
+						</div>
+					
+					
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Back</button></li>
+                            <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+						<div class="row">
+							<div class="col-md-6">
+									<div class="panel panel-primary">
+									<div class="panel-heading">Scope</div>
+									<div class="panel-body">
+										<p class="sub-header" for="exampleInputName2">Success</p>
+										<p for="exampleInputName2">The project will be successfully when it achieves this metrics :</p>
+										<p for="exampleInputName2">Number of customers</p>
+										<input style="width:100px;" type="text" class="form-control" id="exampleInputEmail1">
+										<span>(customers)</span>
+										<p for="exampleInputName2">Annual net income</p>
+										<input style="width:100px;" type="text" class="form-control" id="exampleInputEmail1">
+										<span>(ALL)</span>
+										<p class="sub-header" for="exampleInputName2" style="padding-top:20px;">Obstacles/Challenges/Open Questions</p>
+										<p for="exampleInputName2">Specific concerns or questions</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">Proposed solution to concerns</p>
+										<textarea class="form-control" rows="4"></textarea>
+										<p for="exampleInputName2">Refences</p>
+										<textarea class="form-control" rows="4"></textarea>
+									
+									</div>
+								  </div>
+								
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-primary">
+								<div class="panel-heading">Timeframe</div>
+								<div class="panel-body">
+									<p class="sub-header" for="exampleInputName2">Project Budget</p>
+								<table class="table table-striped">
+									<thead>
+									  <tr>
+										<th>Phases</th>
+										<th>Description</th>
+										<th>Start/End Date</th>
+										<th>Anticipated Costs</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>Phase One</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									  </tr>
+									  <tr>
+										<td>Phase Two</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									  </tr>
+									  <tr>
+										<td>Phase Three</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									  </tr>
+									   <tr>
+										<td>Total</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									  </tr>
+									
+									</tbody>
+								  </table>
+								<p class="sub-header" for="exampleInputName2">Key Stakeholders</p>
+								<table class="table table-striped">
+									<thead>
+									  <tr>
+										<th>Client</th>
+										<th>Sponsor</th>
+										<th>Manager</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>name</td>
+										<td>name</td>
+										<td>name</td>
+									  </tr>
+									  <tr>
+										<td>name</td>
+										<td>name</td>
+										<td>name</td>
+									  </tr>
+									  <tr>
+										<td>name</td>
+										<td>name</td>
+										<td>name</td>
+									  </tr>
+									   <tr>
+										<td>name</td>
+										<td>name</td>
+										<td>name</td>
+									  </tr>
+									</tbody>
+								  </table>
+							</div>
+								</div>
+								</div>
+								
+						</div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Back</button></li>
+                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Next</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="complete">
+							<div class="row">
+							<div class="col-md-6">
+								
+							</div>
+							<div class="col-md-6">
+							</div>
+
+							</div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Back</button></li>
+                            <li><a type="button" href="user_profile.html" class="btn btn-primary btn-info-full next-step">Finish</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+   </div>
+</div>
+	
+</div>
+
+ <footer class="footer">
+      <div class="container">
+        <p class="text-muted" style="font-size:12px;">&copy 2015 <a style="color: #222;text-decoration: none;font-size:12px; " href="http://www.cit.edu.al">Canadian Institute of Technology</a> <a style="color: #222;text-decoration: none;float:right;font-size:12px;">Terms of Use</a></p>
+		
+      </div>
+    </footer>
+</body>
+</html>
